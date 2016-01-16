@@ -63,32 +63,32 @@ describe "Hashing" do
     end
   end
 
-  # describe Hash do
-  #   it "should hash to an integer" do
-  #     expect({a: 1}.hash).to be_a(Integer)
-  #   end
-  #
-  #   it "should hash deterministically" do
-  #     a = {a: "a", b: "b"}
-  #     expect(a.hash).to eq(a.hash)
-  #   end
-  #
-  #   it "should produce the same hash for two identical hashes" do
-  #     a = {a: "a", b: "b"}
-  #     b = {a: "a", b: "b"}
-  #     expect(a.hash).to eq(b.hash)
-  #   end
-  #
-  #   it "should produce the same value for a reordering of the same hash" do
-  #     a = {a: "a", b: "b"}
-  #     b = {b: "b", a: "a"}
-  #     expect(a.hash).to eq(b.hash)
-  #   end
-  #
-  #   it "subsets of hashes should hash to different values" do
-  #     a = {a: "a"}
-  #     b = {a: "a", b: "b"}
-  #     expect(a.hash).not_to eq(b.hash)
-  #   end
-  # end
+  describe Hash do
+    it "should hash to an integer" do
+      expect({a: 1}.hash).to be_a(Integer)
+    end
+
+    it "should hash deterministically" do
+      a = {a: "a", b: "b"}
+      expect(a.hash).to eq(a.hash)
+    end
+
+    it "should produce the same hash for two identical hashes" do
+      a = {a: "a", b: "b"}
+      b = {a: "a", b: "b"}
+      expect(a.hash).to eq(b.hash)
+    end
+
+    it "should produce the same value for a reordering of the same hash" do
+      a = {a: "a", b: "b"}
+      b = {b: "b", a: "a"}
+      expect(a.hash).to eq(b.hash)
+    end
+
+    it "subsets of hashes should hash to different values" do
+      a = {a: "a"}
+      b = {a: "a", b: "b"}
+      expect(a.hash).not_to eq(b.hash)
+    end
+  end
 end
